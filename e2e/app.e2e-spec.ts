@@ -7,6 +7,10 @@ describe('MyApp', () => {
   });
 
   it('should have a title', () => {
-    expect(browser.getTitle()).toEqual('Home');
+    expect(browser.getTitle()).toEqual('Events');
+  });
+
+  it('should have tab nav', () => {
+    expect(element(by.css('ion-tab')).isPresent()).toEqual(true);
   });
 })
