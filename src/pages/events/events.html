@@ -11,10 +11,18 @@
 
 <ion-content padding>
   <ion-list>
-    <ion-item>
+    <ion-item-sliding *ngFor="let event of events">
       <button ion-item (click)="viewEvent(event)">
-        Event Title
+        {{event.name}}
       </button>
-    </ion-item>
+      <ion-item-options>
+        <button ion-button icon-only color="light"
+          (click)="renameEvent(event)"><ion-icon name="clipboard"></ion-icon>
+        </button>
+        <button ion-button icon-only color="danger"
+          (click)="removeEvent(event)"><ion-icon name="trash"></ion-icon>
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
   </ion-list>
 </ion-content>

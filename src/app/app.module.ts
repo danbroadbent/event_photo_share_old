@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
 import { IonicApp, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
+import { Storage } from '@ionic/storage';
+import { Data } from '../providers/data';
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { EventsPage } from '../pages/events/events';
+import { EventDetailsPage } from '../pages/event-details/event-details';
 import { TabsPage } from '../pages/tabs/tabs';
 
 @NgModule({
@@ -12,6 +15,7 @@ import { TabsPage } from '../pages/tabs/tabs';
     AboutPage,
     ContactPage,
     EventsPage,
+    EventDetailsPage,
     TabsPage
   ],
   imports: [
@@ -23,8 +27,9 @@ import { TabsPage } from '../pages/tabs/tabs';
     AboutPage,
     ContactPage,
     EventsPage,
+    EventDetailsPage,
     TabsPage
   ],
-  providers: []
+  providers: [Storage, Data]
 })
 export class AppModule {}

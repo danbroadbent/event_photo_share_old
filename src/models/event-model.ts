@@ -5,7 +5,7 @@ export class EventModel {
     event: any;
     eventObserver: any;
 
-    constructor(public title: string){
+    constructor(public name: string){
 
         this.event = Observable.create(observer => {
             this.eventObserver = observer;
@@ -13,8 +13,8 @@ export class EventModel {
 
     }
 
-    setTitle(title): void {
-        this.title = title;
+    setName(name): void {
+        this.name = name;
         this.eventObserver.next(true);
     }
 }
