@@ -4,17 +4,9 @@
   "homepage": "http://ionicframework.com/",
   "private": true,
   "scripts": {
-    "build": "ionic-app-scripts build",
-    "watch": "ionic-app-scripts watch",
-    "serve:before": "watch",
-    "emulate:before": "build",
-    "deploy:before": "build",
-    "build:before": "build",
-    "run:before": "build",
-    "e2e": "protractor",
-    "postinstall": "ionic state restore && webdriver-manager update",
-    "start": "ionic serve",
-    "test": "ng test"
+    "ionic:build": "ionic-app-scripts build",
+    "ionic:serve": "ionic-app-scripts serve",
+    "e2e": "protractor"
   },
   "dependencies": {
     "@angular/common": "2.1.1",
@@ -27,6 +19,7 @@
     "@angular/platform-browser-dynamic": "2.1.1",
     "@angular/platform-server": "2.1.1",
     "@ionic/storage": "1.1.6",
+    "firebase": "^3.6.1",
     "ionic-angular": "2.0.0-rc.2",
     "ionic-native": "2.2.3",
     "ionicons": "3.0.0",

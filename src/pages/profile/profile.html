@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Profile</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="goToProfileEdit()">
+        <ion-icon name="log-out"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="profile">
+  <ion-list>
+    <ion-list-header>
+      Public Information
+    </ion-list-header>
+
+    <ion-item *ngIf="userProfile?.username">
+     <ion-grid>
+        <ion-row>
+          <ion-col width-50>
+            Username
+          </ion-col>
+          <ion-col>
+            {{userProfile.username}}
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+
+    <ion-list-header>
+      Personal Information
+    </ion-list-header>
+
+    <ion-item *ngIf="userProfile?.email">
+      <ion-grid>
+        <ion-row>
+          <ion-col width-50>
+            Email
+          </ion-col>
+          <ion-col>
+            {{userProfile.email}}
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+
