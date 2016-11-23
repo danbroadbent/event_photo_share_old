@@ -1,8 +1,18 @@
 import { browser, element, by, ElementFinder } from 'protractor';
 
-let newEventField: ElementFinder = element(by.css('.alert-input'));
+let newEventTitle: ElementFinder = element(by.css('.form-input'));
+let newEventDescription: ElementFinder = element(by.css('.form-input'));
+let newEventLocation: ElementFinder = element(by.css('.form-input'));
+let newEventStartTime: ElementFinder = element(by.css('.form-input'));
+let newEventEndTime: ElementFinder = element(by.css('.form-input'));
+let newEventCoverPhoto: ElementFinder = element(by.css('.form-input'));
 let submitEventButton: ElementFinder = element(by.buttonText('Save'));
-let firstEvent: ElementFinder = element(by.css('.label-md'));
+let eventTitle: ElementFinder = element(by.css('.title'));
+let eventDescription: ElementFinder = element(by.css('.title'));
+let eventLocation: ElementFinder = element(by.css('.title'));
+let eventStartTime: ElementFinder = element(by.css('.title'));
+let eventEndTime: ElementFinder = element(by.css('.title'));
+let eventCoverPhoto: ElementFinder = element(by.css('.title'));
 
 describe('MyApp', () => {
 
@@ -13,9 +23,9 @@ describe('MyApp', () => {
   it('creates event', () => {
     element(by.css('#add-event')).click()
       .then(() => {
-        'test event one'.split('').forEach((c) => newEventField.sendKeys(c));
+        'test event one'.split('').forEach((c) => newEventTitle.sendKeys(c));
         submitEventButton.click();
-        expect(firstEvent.getText()).toEqual('test event one');
+        expect(eventTitle.getText()).toEqual('test event one');
       });
   });
 
