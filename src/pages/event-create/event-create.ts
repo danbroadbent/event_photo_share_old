@@ -1,19 +1,25 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-/*
-  Generated class for the EventCreate page.
-
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
   selector: 'page-event-create',
-  templateUrl: 'event-create.html'
+  templateUrl: 'event-create.html',
 })
 export class EventCreatePage {
 
-  constructor(public navCtrl: NavController) {}
+  createEventForm: FormGroup;
+
+  constructor(public navCtrl: NavController, public formBuilder: FormBuilder) {
+    this.createEventForm = formBuilder.group({
+      eventName: ['']
+    });
+  }
+
+  saveForm(event){
+    event.preventDefault();
+    console.log(this.createEventForm.value)
+  }
 
   ionViewDidLoad() {
     console.log('Hello EventCreatePage Page');

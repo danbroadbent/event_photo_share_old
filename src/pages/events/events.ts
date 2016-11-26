@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, AlertController, Platform } from 'ionic-angular';
 import { EventDetailsPage } from '../event-details/event-details';
+import { EventCreatePage } from '../event-create/event-create';
 import { EventModel } from '../../models/event-model';
 import { Data } from '../../providers/data';
 import { Storage } from '@ionic/storage';
@@ -44,6 +45,10 @@ export class EventsPage {
         }
       });
     });
+  }
+
+  goToCreateEvent(){
+    this.nav.push(EventCreatePage);
   }
 
   addEvent(): void {
