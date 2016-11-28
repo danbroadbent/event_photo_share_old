@@ -13,6 +13,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { ResetPasswordPage } from '../pages/reset-password/reset-password';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
+import { EventCreatePage } from '../pages/event-create/event-create'
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SignupPage } from '../pages/signup/signup';
     TabsPage,
     ResetPasswordPage,
     LoginPage,
-    SignupPage
+    SignupPage,
+    EventCreatePage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -39,7 +41,8 @@ import { SignupPage } from '../pages/signup/signup';
     TabsPage,
     ResetPasswordPage,
     LoginPage,
-    SignupPage
+    SignupPage,
+    EventCreatePage
   ],
   providers: [Storage, Data, AuthData, ProfileData]
 })

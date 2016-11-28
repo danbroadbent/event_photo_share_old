@@ -1,18 +1,18 @@
-<!--
-  Generated template for the EventCreate page.
-
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Event-create</ion-title>
+    <ion-title>Create Event</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
+<form [formGroup]="createEventForm" (submit)="saveEventForm($event)">
+  <ion-item>
+    <ion-label stacked>Event Name</ion-label>
+    <ion-input formControlName="eventName" type="text"></ion-input>
+  </ion-item>
+  <button ion-button block type="submit">Create Event</button>
+</form>
 </ion-content>
