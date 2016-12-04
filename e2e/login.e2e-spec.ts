@@ -1,23 +1,18 @@
 import { browser, element, by, ElementFinder } from 'protractor';
 
-let username: ElementFinder = element(by.css('.formUsername'));
-let password: ElementFinder = element(by.css('.formPassword'));
-let submitLogin: ElementFinder = element(by.buttonText('Save'));
+describe('Login', () => {
 
-describe('MyApp', () => {
-
-  beforeEach(() => {
-    browser.get('');
+  it('should have a title', () => {
+    expect(browser.getTitle()).toEqual('Events');
   });
 
   it('logs in', () => {
-    element(by.css('#login')).click()
-      .then(() => {
-        'demo'.split('').forEach((c) => username.sendKeys(c));
-        'demopassword'.split('').forEach((c) => password.sendKeys(c));
-        submitLogin.click();
-        expect(browser.getTitle()).toEqual('Events');
-      });
+    browser.get('/');
+    browser.ignoreSynchronization = true;
+    element(by.id('login')).click()
+    element(by.id('email')).click()
+    element(by.id('email')).sendKeys('Jane');
+    element(by.css('password')).sendKeys('1234');
+    element(by.buttonText('LOGIN')).click();
   });
-
 })

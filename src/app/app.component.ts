@@ -3,7 +3,7 @@ import { Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
 import { TabsPage } from '../pages/tabs/tabs';
-import { SignupPage } from '../pages/signup/signup';
+import { SplashPage } from '../pages/splash/splash';
 
 import firebase from 'firebase';
 
@@ -27,7 +27,7 @@ export class MyApp {
 
     firebase.auth().onAuthStateChanged( user => {
       if (!user) {
-        this.rootPage = SignupPage;
+        this.rootPage = SplashPage;
       }
     });
 
