@@ -5,7 +5,6 @@ import {
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { AuthData } from '../../providers/auth-data';
-import { SignupPage } from '../signup/signup';
 import { TabsPage } from '../tabs/tabs';
 import { ResetPasswordPage } from '../reset-password/reset-password';
 import { EmailValidator } from '../../validators/email';
@@ -65,10 +64,6 @@ export class LoginPage {
       });
       this.loading.present();
     }
-  }
-
-  goToSignup(){
-    this.nav.push(SignupPage);
   }
 
   goToResetPassword(){

@@ -4,7 +4,6 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { AuthData } from '../../providers/auth-data';
 import { EmailValidator } from '../../validators/email';
 import { TabsPage } from '../tabs/tabs';
-import { LoginPage } from '../login/login';
 
 @Component({
   selector: 'page-signup',
@@ -63,9 +62,5 @@ export class SignupPage {
       });
       this.loading.present();
     }
-  }
-
-  goToLogin(){
-    this.nav.push(LoginPage);
   }
 }

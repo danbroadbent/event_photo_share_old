@@ -10,6 +10,7 @@ import { ProfileEditPage } from '../pages/profile-edit/profile-edit';
 import { EventsPage } from '../pages/events/events';
 import { EventDetailsPage } from '../pages/event-details/event-details';
 import { TabsPage } from '../pages/tabs/tabs';
+import { SplashPage } from '../pages/splash/splash';
 import { ResetPasswordPage } from '../pages/reset-password/reset-password';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
@@ -23,6 +24,7 @@ import { EventCreatePage } from '../pages/event-create/event-create'
     EventsPage,
     EventDetailsPage,
     TabsPage,
+    SplashPage,
     ResetPasswordPage,
     LoginPage,
     SignupPage,
@@ -39,6 +41,7 @@ import { EventCreatePage } from '../pages/event-create/event-create'
     EventsPage,
     EventDetailsPage,
     TabsPage,
+    SplashPage,
     ResetPasswordPage,
     LoginPage,
     SignupPage,
